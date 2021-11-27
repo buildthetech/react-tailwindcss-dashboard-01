@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    // Base
+    @apply relative ring-0 flex flex-row items-center justify-center select-none;
+    // Sizes
+    &.size-sm {
+      @apply active:ring-2 px-3 h-8 rounded-md text-sm gap-1;
+      .icon {
+        @apply w-4 h-4;
+      }
+    }
+    &.size-md {
+      @apply active:ring-2 px-5 h-10 rounded-lg text-base gap-1.5;
+      .icon {
+        @apply w-5 h-5;
+      }
+    }
+    &.size-lg {
+      @apply active:ring-4 px-7 h-12 rounded-lg text-lg font-semibold gap-2;
+      .icon {
+        @apply w-6 h-6;
+      }
+    }
+    &.icon-btn,
+    &.avatar-btn {
+      &.size-sm {
+        @apply px-0 w-8;
+      }
+      &.size-md {
+        @apply px-0 w-10;
+      }
+      &.size-lg {
+        @apply px-0 w-12;
+      }
+    }
+    // Styles
+    &.not-ghost {
+      &.primary {
+        @apply bg-primary-500 text-white hover:bg-primary-600 ring-primary-500 ring-opacity-30;
+      }
+      &.secondary {
+        @apply bg-gray-900 dark:bg-white text-gray-900 dark:text-gray-100 bg-opacity-0 dark:bg-opacity-0 hover:bg-opacity-5 dark:hover:bg-opacity-5 ring-opacity-10 dark:ring-opacity-10 ring-gray-900 dark:ring-white;
+      }
+      &.success {
+        @apply bg-green-500 text-white hover:bg-green-600 ring-green-500 ring-opacity-30;
+      }
+      &.warning {
+        @apply bg-yellow-500 text-white hover:bg-yellow-600 ring-yellow-500 ring-opacity-30;
+      }
+      &.danger {
+        @apply bg-red-500 text-white hover:bg-red-600 ring-red-500 ring-opacity-30;
+      }
+    }
+
+    // Ghost
+    &.ghost {
+      @apply ring-1;
+      &.size-sm,
+      &.size-md,
+      &.size-lg {
+        @apply active:ring-2;
+      }
+      &.primary {
+        @apply ring-primary-500 ring-opacity-50 hover:ring-opacity-100  text-primary-500 active:ring-primary-500 bg-primary-500 bg-opacity-0 hover:bg-opacity-10;
+      }
+      &.secondary {
+        @apply ring-gray-800 dark:ring-gray-100 ring-opacity-50 dark:ring-opacity-50 hover:ring-opacity-100 dark:hover:ring-opacity-100 text-gray-800 dark:text-gray-100 active:ring-gray-800 dark:active:ring-gray-100 bg-gray-900 dark:bg-white bg-opacity-0 hover:bg-opacity-10 dark:bg-opacity-0 dark:hover:bg-opacity-10;
+      }
+      &.success {
+        @apply ring-green-500 ring-opacity-50 hover:ring-opacity-100 text-green-500 active:ring-green-500 bg-green-500 bg-opacity-0 hover:bg-opacity-10;
+      }
+      &.warning {
+        @apply ring-yellow-500 ring-opacity-50 hover:ring-opacity-100 text-yellow-500 active:ring-yellow-500 bg-yellow-500 bg-opacity-0 hover:bg-opacity-10;
+      }
+      &.danger {
+        @apply ring-red-500 ring-opacity-50 hover:ring-opacity-100 text-red-500 active:ring-red-500 bg-red-500 bg-opacity-0 hover:bg-opacity-10;
+      }
+    }
+
+    &.avatar-btn {
+      @apply overflow-hidden bg-opacity-0 dark:bg-opacity-0 hover:bg-opacity-10 dark:hover:bg-opacity-10 ring-opacity-20 dark:ring-opacity-20 ring-gray-900 dark:ring-white;
+      .avatar-img {
+        @apply w-full h-full object-cover;
+      }
+    }
+
+    // Badge
+    .badge {
+      @apply pointer-events-none absolute -bottom-1 left-1/2 px-1.5 rounded-full bg-red-500 text-white text-sm shadow-sm;
+    }
+  }
+
+  .grid-table {
+    @apply grid;
+  }
+
+  .status {
+    @apply px-2 py-0.5 md:px-4 md:py-1 rounded-lg inline-block;
+    &.success {
+      @apply bg-green-600 text-green-600 bg-opacity-10;
+    }
+    &.Rejected,
+    &.rejected {
+      @apply bg-red-600 text-red-600 bg-opacity-10;
+    }
+    &.pending,
+    &.Pending {
+      @apply bg-yellow-600 text-yellow-600 bg-opacity-10;
+    }
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-sm;
+  }
+  .CircularProgressbar {
+    .CircularProgressbar-path {
+      @apply text-primary-500;
+    }
+    .CircularProgressbar-trail {
+      @apply text-transparent;
+    }
+    .CircularProgressbar-text {
+      @apply text-primary-500 font-bold;
+    }
+  }
+}
+.CircularProgressbar {
+  .CircularProgressbar-path {
+    stroke: currentColor;
+  }
+  .CircularProgressbar-trail {
+    stroke: currentColor;
+  }
+  .CircularProgressbar-text {
+    fill: currentColor;
+  }
+}
+
+.dark {
+  color-scheme: dark;
+}
