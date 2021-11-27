@@ -1,6 +1,9 @@
 {
   "name": "dashboard",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "description": "A dashboard template built with react, tailwindcss, vite and typescript",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
