@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
-import { THEME_KEY } from "../constents";
+import { Actions, THEME_KEY } from "../constents";
 
 export type DashboardContextType = {
   darkMode: boolean;
@@ -11,10 +11,10 @@ export const DashboardContext = createContext<{
 } | null>(null);
 
 type DarkModeToggleActionType = {
-  type: "ToggleDarkMode";
+  type: Actions.TOOGLE_DARK_MODE;
 };
 type SideBarToggleActionType = {
-  type: "ToggleSideBar";
+  type: Actions.TOOGLE_SIDE_BAR;
   hidden?: boolean;
 };
 
@@ -27,9 +27,9 @@ export const reducer = (
   action: DashboardContextActionType
 ): DashboardContextType => {
   switch (action.type) {
-    case "ToggleDarkMode":
+    case Actions.TOOGLE_DARK_MODE:
       return { ...state, darkMode: !state.darkMode };
-    case "ToggleSideBar":
+    case Actions.TOOGLE_SIDE_BAR:
       return {
         ...state,
         isSideBarHidden:

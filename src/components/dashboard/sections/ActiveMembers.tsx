@@ -63,9 +63,8 @@ const ActiveMembers = () => {
           {amount.toLocaleString()}
         </p>
         <div
-          className={`flex flex-row items-center justify-center text-lg font-semibold ${
-            rate < 0 ? "text-red-500" : "text-green-500"
-          }`}
+          className={`flex flex-row items-center justify-center text-lg font-semibold ${rate < 0 ? "text-red-500" : "text-green-500"
+            }`}
           title={rate.toLocaleString()}
         >
           <p>{rate}</p>

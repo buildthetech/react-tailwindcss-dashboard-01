@@ -9,8 +9,9 @@ import {
 import { AvatarButton, IconButton } from "../buttons";
 import { useDashboard } from "../../hooks/useDashboard";
 import Logo from "../Logo";
+import { Actions } from "../../constents";
 
-const AppBar = ({}: {}) => {
+const AppBar = ({ }: {}) => {
   const {
     state: { darkMode },
     dispatch,
@@ -28,7 +29,7 @@ const AppBar = ({}: {}) => {
             size="md"
             type="secondary"
             onClick={() => {
-              dispatch({ type: "ToggleSideBar" });
+              dispatch({ type: Actions.TOOGLE_SIDE_BAR });
             }}
           />
         </div>
@@ -57,7 +58,7 @@ const AppBar = ({}: {}) => {
           title="Dark Mode"
           size="md"
           type="secondary"
-          onClick={() => dispatch({ type: "ToggleDarkMode" })}
+          onClick={() => dispatch({ type: Actions.TOOGLE_DARK_MODE })}
         />
         <IconButton
           Icon={BellIcon}

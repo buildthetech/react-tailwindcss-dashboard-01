@@ -4,6 +4,8 @@ import {
   TrendingUpIcon,
   ViewGridIcon,
 } from "@heroicons/react/solid";
+import { MouseEventHandler } from "react";
+import { Actions } from "../../constents";
 import { useDashboard } from "../../hooks/useDashboard";
 import { SideBarButton } from "../buttons";
 
@@ -15,7 +17,7 @@ const SideBar = () => {
     >
       <SideBarButton
         onClick={() => {
-          dispatch({ type: "ToggleSideBar", hidden: true });
+          dispatch({ type: Actions.TOOGLE_SIDE_BAR, hidden: true });
         }}
         name="Overview"
         Icon={TemplateIcon}
@@ -23,7 +25,7 @@ const SideBar = () => {
       />
       <SideBarButton
         onClick={() => {
-          dispatch({ type: "ToggleSideBar", hidden: true });
+          dispatch({ type: Actions.TOOGLE_SIDE_BAR, hidden: true });
         }}
         name="Analytics"
         Icon={TrendingUpIcon}
@@ -31,7 +33,7 @@ const SideBar = () => {
       />
       <SideBarButton
         onClick={() => {
-          dispatch({ type: "ToggleSideBar", hidden: true });
+          dispatch({ type: Actions.TOOGLE_SIDE_BAR, hidden: true });
         }}
         name="Sales"
         Icon={CurrencyDollarIcon}
@@ -39,7 +41,7 @@ const SideBar = () => {
       />
       <SideBarButton
         onClick={() => {
-          dispatch({ type: "ToggleSideBar", hidden: true });
+          dispatch({ type: Actions.TOOGLE_SIDE_BAR, hidden: true });
         }}
         name="Components"
         Icon={ViewGridIcon}

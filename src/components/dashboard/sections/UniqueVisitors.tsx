@@ -63,7 +63,7 @@ export const data = {
       borderColor: "#10B981",
       backgroundColor: "#10B981",
       yAxisID: "y",
-    },
+    }
   ],
 };
 
