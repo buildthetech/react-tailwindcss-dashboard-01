@@ -57,7 +57,7 @@ export const data = {
 
 const Customers = () => {
     return (
-        <div className="flex flex-col gap-4 card rounded-xl border border-gray-200 dark:border-gray-700 p-6 w-full h-full">
+        <div className="flex flex-col gap-4 card rounded-xl p-6 w-full h-full">
             <div className="flex flex-row justify-between items-start">
                 <div className="flex flex-col gap-3">
                     <p className="text-lg font-semibold">Customers</p>
@@ -79,7 +79,7 @@ const Customers = () => {
                     </div>
                 </div>
                 <div className="flex">
-                    <select className="border border-gray-300 dark:border-gray-600  px-2 py-1 rounded-md cursor-pointer outline-none">
+                    <select className="border card  px-2 py-1 rounded-md cursor-pointer outline-none">
                         <option className="rounded-none">This week</option>
                         <option className="rounded-none">This month</option>
                         <option className="rounded-none">This year</option>

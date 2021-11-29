@@ -5,7 +5,7 @@ import { BarChartComponent } from './BarChartComponent'
 
 export default function WeeklyRevenue() {
     return (
-        <div className='border flex flex-col lg:flex-row border-gray-200 dark:border-gray-700 px-2 py-2 h-full card w-full rounded-xl'>
+        <div className='flex flex-col lg:flex-row px-2 py-2 h-full card w-full rounded-xl'>
             <div className="flex flex-col justify-between px-2">
                 <div className="flex-col flex gap-2">
                     <p className='text-lg font-medium'>Weekly Revenue</p>

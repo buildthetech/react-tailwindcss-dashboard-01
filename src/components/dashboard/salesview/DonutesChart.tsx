@@ -25,7 +25,7 @@ export const data = {
             display: false,
             plugins: {
                 datalabels: {
-                    display: true,
+                    display: false,
                 }
             }
         },
@@ -36,7 +36,7 @@ export const data = {
 
 export default function DonutesChart() {
     return (
-        <div className="bg-white rounded-xl w-full border border-gray-200 dark:border-gray-700 card p-6">
+        <div className="bg-white rounded-xl w-full card p-6">
             <div className="flex flex-col gap-8 items-center">
                 <Doughnut options={{ animation: { animateRotate: true }, }} data={data} />
                 <div className="flex flex-col w-full px-4 sm:w-80 gap-4">

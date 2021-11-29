@@ -56,7 +56,7 @@ export default function RecentOrders() {
         },
     ]
     return (
-        <div className='card border border-gray-200 dark:border-gray-700 p-6 rounded-xl w-full'>
+        <div className='card p-6 rounded-xl w-full'>
             <div className="flex flex-col w-full gap-4">
                 <p className='font-medium text-lg'>Recent orders</p>
                 <div className="flex flex-col overflow-x-auto">
@@ -100,18 +100,12 @@ export default function RecentOrders() {
                                     </p>
                                 </div>
                                 <div className='mt-1'>
-                                    <button className={`truncate text-sm ${user.orderStatus === 'Ready' ? "bg-blue-100 text-blue-600" : "bg-green-100 text-green-600"} rounded py-1 px-2`}>
+                                    <p className={`${`status ${user.paymentStatus === 'Paid' ? "success" : "pending"}`}`}>
                                         {user.orderStatus}
-                                    </button>
+                                    </p>
                                 </div>
                                 <div className='items-center flex gap-2'>
-                                    {
-                                        user.paymentStatus === 'Paid' ?
-                                            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                                            :
-                                            <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
-                                    }
-                                    <p className='truncate'>
+                                    <p className={`status ${user.paymentStatus === 'Paid' ? "success" : "pending"}`}>
                                         {user.paymentStatus}
                                     </p>
                                 </div>

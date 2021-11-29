@@ -61,7 +61,7 @@ export default function TopProducts() {
         }
     ]
     return (
-        <div className='card border p-6 border-gray-200 dark:border-gray-700 gap-4 flex flex-col w-full rounded-xl'>
+        <div className='card p-6 gap-4 flex flex-col w-full rounded-xl'>
             <p className='font-medium text-lg'>Top Products</p>
             <div className="flex flex-col w-full h-full gap-5 justify-between">
                 {
