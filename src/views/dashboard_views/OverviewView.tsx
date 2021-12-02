@@ -5,7 +5,7 @@ import {
   MonthlyTarget,
   NewUsers,
   UniqueVisitors,
-} from "../../components/dashboard/sections";
+} from "../../components/dashboard/overview";
 
 const OverviewView = () => {
   return (
