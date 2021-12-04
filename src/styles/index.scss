@@ -103,6 +103,9 @@
     &.success {
       @apply bg-green-600 text-green-600 bg-opacity-10;
     }
+    &.ready {
+      @apply bg-blue-600 text-blue-600 bg-opacity-10;
+    }
     &.Rejected,
     &.rejected {
       @apply bg-red-600 text-red-600 bg-opacity-10;
