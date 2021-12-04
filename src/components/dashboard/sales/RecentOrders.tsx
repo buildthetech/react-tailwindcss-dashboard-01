@@ -122,18 +122,16 @@ export default function RecentOrders() {
               </div>
               <div className="mt-1">
                 <p
-                  className={`${`status ${
-                    user.paymentStatus === "Paid" ? "success" : "pending"
-                  }`}`}
+                  className={`${`status ${user.orderStatus === "Ready" ? "ready" : "success"
+                    }`}`}
                 >
                   {user.orderStatus}
                 </p>
               </div>
               <div className="items-center flex gap-2">
                 <p
-                  className={`status ${
-                    user.paymentStatus === "Paid" ? "success" : "pending"
-                  }`}
+                  className={`status ${user.paymentStatus === "Paid" ? "success" : "pending"
+                    }`}
                 >
                   {user.paymentStatus}
                 </p>

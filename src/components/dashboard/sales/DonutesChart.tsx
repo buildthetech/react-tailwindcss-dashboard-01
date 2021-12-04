@@ -12,7 +12,6 @@ export const data = {
       data: [3561, 1443, 2462, 1693],
       backgroundColor: ["#3E82F7", "#04D182", "#FFC107", "#FA8C16"],
       fill: false,
-      borderColor: "rgba(0,0,0,0)",
     },
   ],
   options: {
@@ -45,7 +44,7 @@ export default function DonutesChart() {
 
       <div className="flex flex-col gap-2 w-full">
         {data.datasets[0].data.map((item, i) => (
-          <div className="flex flow-row flex-1 justify-between items-center gap-4 w-full">
+          <div key={i} className="flex flow-row flex-1 justify-between items-center gap-4 w-full">
             <div className="flex flex-row items-center gap-4">
               <div
                 className="div w-2 h-2 rounded-full"
